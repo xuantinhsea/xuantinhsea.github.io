@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://yourusername.github.io/sitemap.xml
+Sitemap: https://xuantinhsea.github.io/sitemap.xml
