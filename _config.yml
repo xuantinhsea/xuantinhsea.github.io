@@ -1,81 +1,15 @@
-# Site settings
-title: "Nguyen Xuan Tinh - Senior Consultant & Water Resources Expert"
-description: "Professional Consulting Portfolio - Expert water resources management, coastal engineering, and climate resilience consulting services"
+# GitHub Pages builds this site with Jekyll. The pages are plain HTML with no
+# front matter, so Jekyll copies them as they are; this file only sets site
+# metadata and keeps repository files out of the published site.
+title: "Nguyen Xuan Tinh"
+description: "Hydrologist and coastal engineer: water resources, flood risk, coastal engineering and climate resilience."
 author: "Nguyen Xuan Tinh"
-email: "xuantinhsea@gmail.com"
 url: "https://xuantinhsea.github.io"
-baseurl: "" # Empty for username.github.io repositories
+baseurl: ""
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
-theme: minima
-
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-# Exclude from processing
 exclude:
+  - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
-  - .gitignore
-  - .gitattributes
-
-# Include
-include:
-  - _pages
-
-# SEO
-seo:
-  type: "Person"
-  name: "Nguyen Xuan Tinh"
-  jobTitle: "Senior Consultant & Water Resources Expert"
-  description: "Expert consulting services in water resources management, coastal engineering, and climate resilience"
-  links:
-    - "https://github.com/xuantinhsea"
-    - "https://linkedin.com/in/xuantinhsea"
-    - "https://scholar.google.com"
-
-# Social media
-social:
-  name: "Nguyen Xuan Tinh"
-  links:
-    - "https://github.com/xuantinhsea"
-    - "https://linkedin.com/in/xuantinhsea"
-    - "https://scholar.google.com"
-    - "https://orcid.org/0000-0003-4156-6230"
-
-# Analytics (uncomment and add your tracking ID)
-# google_analytics: "GA_TRACKING_ID"
-
-# Comments (uncomment to enable)
-# disqus:
-#   shortname: "your-disqus-shortname"
+  - vendor
