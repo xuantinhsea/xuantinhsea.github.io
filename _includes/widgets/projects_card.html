@@ -12,7 +12,7 @@
                     {% for project in site.data.projects %}
                     <article class="project-entry{% if forloop.first %} pt-1{% endif %}">
                         <div class="d-flex flex-wrap align-items-baseline">
-                            <h3 class="project-title mb-1 mr-2">{{ project.name }}</h3>
+                            <h5 class="project-title mb-1 mr-2">{{ project.name }}</h5>
                             {% if project.status == "ongoing" %}<span class="project-status">Ongoing</span>{% endif %}
                         </div>
                         <p class="small mb-2 project-meta">
