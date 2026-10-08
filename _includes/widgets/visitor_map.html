@@ -1,0 +1,17 @@
+{%- comment -%}
+  "Visitors Around the World" card with a ClustrMaps widget.
+  Shown only when clustrmaps_src is set in _data/profile.yml.
+{%- endcomment -%}
+{%- assign src = site.data.profile.clustrmaps_src -%}
+{%- if src and src != "" -%}
+{%- if src contains "globe.js" -%}{%- assign widget_id = "clstr_globe" -%}{%- else -%}{%- assign widget_id = "clustrmaps" -%}{%- endif -%}
+<section class="visitor-card my-3 bg-white shadow-sm rounded-sm" aria-labelledby="visitor-map-heading">
+    <header class="visitor-card-header">
+        <h6 id="visitor-map-heading" class="mb-1"><i class="fas fa-globe-asia mr-2" aria-hidden="true"></i>Visitors Around the World</h6>
+        <p class="mb-0">A living map of visits, exchanges, and possible collaborations across borders.</p>
+    </header>
+    <div class="visitor-card-body">
+        <script id="{{ widget_id }}" src="{{ src }}"></script>
+    </div>
+</section>
+{%- endif -%}

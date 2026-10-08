@@ -89,4 +89,8 @@ service:
   - name: "Japan Society of Civil Engineers (JSCE): <strong>Member</strong>"
   - name: "International Association for Hydro-Environment Engineering and Research (IAHR): <strong>Member</strong>"
 
+# Visitor map (ClustrMaps). Paste the "src" address from your ClustrMaps widget
+# code, e.g. "//clustrmaps.com/globe.js?d=XXXXXXXX". Leave empty to hide the card.
+clustrmaps_src: ""
+
 footer_text: "Floods, rivers and coasts across Asia and the Pacific."

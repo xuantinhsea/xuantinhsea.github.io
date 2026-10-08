@@ -252,6 +252,29 @@ blockquote::before {
     }
 }
 
+/* ===== Visitors Around the World ===== */
+.visitor-card-header {
+    padding: 1rem 1.25rem 0.5rem;
+}
+
+.visitor-card-header p {
+    color: #6f8187;
+    font-size: 0.9rem;
+}
+
+.visitor-card-body {
+    display: flex;
+    justify-content: center;
+    min-height: 220px;
+    padding: 0.75rem 1.25rem 1.5rem;
+    overflow: hidden;
+}
+
+.visitor-card-body canvas,
+.visitor-card-body img {
+    max-width: 100%;
+}
+
 /* ===== Dark theme ===== */
 html[data-theme="dark"] {
     color-scheme: dark;
@@ -378,6 +401,10 @@ html[data-theme="dark"] .publication-action-paper { color: #efaaaa; border-color
 html[data-theme="dark"] .publication-action-project { color: #9bc5e8; border-color: #3d627f; background: #152331; }
 html[data-theme="dark"] .publication-action-code { color: #d0d7de; border-color: #46515c; background: #1a2027; }
 html[data-theme="dark"] .publication-action-cite { color: #c6b5e4; border-color: #5c4f72; background: #211c2a; }
+
+html[data-theme="dark"] .visitor-card-header p {
+    color: var(--muted);
+}
 
 html[data-theme="dark"] .pub-cover {
     border-color: var(--border);

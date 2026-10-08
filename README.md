@@ -18,6 +18,11 @@ commit, and GitHub Pages rebuilds the site in about a minute.
 | `_data/projects.yml` | Recent consulting projects |
 | `_data/navigation.yml` | Links in the top menu |
 
+**Visitor map:** the "Visitors Around the World" card uses a free
+[ClustrMaps](https://clustrmaps.com) widget. Put the `src` address from your
+widget code into `clustrmaps_src` in `_data/profile.yml`; leave it empty to hide
+the card.
+
 **Adding a paper:** copy an entry in `_data/publications.yml` and change the
 fields. Your name is highlighted automatically in `authors` (all spellings under
 `name_variants` in `profile.yml`). Optional extras:
