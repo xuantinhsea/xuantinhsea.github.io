@@ -1,5 +1,5 @@
-# Everything in the profile, bio, education, experience, awards and
-# membership cards. Text fields accept HTML (<strong>, <a href="...">, ...).
+# Everything in the profile, services, experience, credentials and contact
+# cards. Text fields accept HTML (<strong>, <a href="...">, ...).
 
 primary_name: "Nguyen Xuan Tinh"
 navbar_name: "Nguyen Xuan Tinh"
@@ -12,11 +12,22 @@ name_variants:
 
 positions:
   - icon: "fas fa-briefcase"
-    text: 'Senior Hydrologist, <a href="https://www.n-koei.co.jp/english/" target="_blank" rel="noopener">Nippon Koei Co., Ltd.</a> (2026)'
-  - icon: "fas fa-user-graduate"
-    text: "Ph.D. in Civil &amp; Environmental Engineering, Tohoku University"
+    text: 'Senior Hydrologist, Water Resources &amp; Energy Department, <a href="https://www.n-koei.co.jp/english/" target="_blank" rel="noopener">Nippon Koei Co., Ltd.</a>'
+  - icon: "fas fa-water"
+    text: "Flood risk, river basin and coastal resilience consulting across Asia and the Pacific"
+  - icon: "fas fa-certificate"
+    text: "Ph.D., Tohoku University &middot; Project Management Professional (PMP)"
   - icon: "fas fa-map-marker-alt"
-    text: "5-4 Kojimachi, Chiyoda-ku, Tokyo 102-8539, Japan"
+    text: "Tokyo, Japan"
+
+# The three figures under the name. Keep them to claims you can back up.
+stats:
+  - value: "18+"
+    label: "years in water resources and coastal engineering"
+  - value: "15+"
+    label: "international consulting projects delivered"
+  - value: "US$5M+"
+    label: "in coastal resilience projects led"
 
 email: "xuantinhsea@gmail.com"
 gscholar: "HjEHy2EAAAAJ"
@@ -28,16 +39,89 @@ portrait_url: "assets/images/portrait.jpg"
 portrait_caption: "Nguyen Xuan Tinh, Tokyo"
 
 short_bio: >-
-  Hi, I am <strong>Nguyen Xuan Tinh</strong>, a Senior Hydrologist in the Water Resources &amp; Energy Department
-  of <strong>Nippon Koei Co., Ltd.</strong> in Tokyo. I received my Ph.D. in Civil and Environmental Engineering
-  from <a href="https://www.tohoku.ac.jp/en/" target="_blank" rel="noopener">Tohoku University</a>, after an
-  M.Eng. in Water Resources Engineering at Lund University. Previously, I was a Senior Consultant at CTI Engineering
-  International (2022–2026) and an Assistant Professor at Tohoku University (2017–2022).
-  <br> With more than 18 years of experience, I lead flood-risk, coastal and climate-resilience projects across Asia
-  and the Pacific for clients including <strong>ADB</strong>, <strong>JICA</strong> and the <strong>World Bank</strong>.
-  <br> My research interests focus on <strong>coastal morphodynamics and shoreline evolution</strong>,
-  <strong>flood and inundation modelling</strong>, and <strong>remote sensing and machine learning for water</strong>.
-  <br> <span style="color: red; font-style: italic;">Feel free to contact me about consulting, technical advisory or research collaboration.</span>
+  I am a <strong>Senior Hydrologist</strong> in the Water Resources &amp; Energy Department of
+  <strong>Nippon Koei Co., Ltd.</strong> in Tokyo. For more than 18 years I have worked on floods, rivers and
+  coasts, and today I lead flood-risk, river-basin and coastal-resilience assignments for the
+  <strong>Asian Development Bank</strong>, <strong>JICA</strong>, the <strong>World Bank</strong> and national
+  governments across Asia and the Pacific.
+  <br> My work runs from the technical core &mdash; hydrological and hydraulic modelling, flood and inundation
+  mapping, coastal morphodynamics and climate change impact assessment &mdash; to what makes a project land:
+  feasibility studies, project management, and training the agencies that will run the systems once a project ends.
+  <br> Before Nippon Koei, I was a Senior Consultant at CTI Engineering International (2022&ndash;2026), an
+  Assistant Professor at Tohoku University (2017&ndash;2022) and a Water Resources Engineer at Dynamic
+  International Solutions in Vietnam (2012&ndash;2015). Those years in research are why I bring remote sensing and
+  machine learning into everyday project work.
+
+# The line and buttons under the bio.
+availability: "Available for consulting assignments, technical advisory and expert review."
+
+# What clients engage me for. Icons are Font Awesome 5 (free).
+services:
+  - icon: "fas fa-water"
+    title: "Coastal &amp; Water Resources Management"
+    text: "Strategic planning, flood risk assessment and sustainable water management for governments and organisations."
+  - icon: "fas fa-cloud-showers-heavy"
+    title: "Climate Resilience"
+    text: "Climate change adaptation strategies, coastal protection planning and disaster risk reduction."
+  - icon: "fas fa-drafting-compass"
+    title: "Technical Advisory"
+    text: "Expert technical guidance, feasibility studies and project evaluation for infrastructure development."
+  - icon: "fas fa-chalkboard-teacher"
+    title: "Capacity Building"
+    text: "Training programmes, workshops and knowledge transfer that build lasting local expertise and institutional capacity."
+  - icon: "fas fa-tasks"
+    title: "Project Management"
+    text: "End-to-end delivery from planning to implementation, on time and to quality, by a certified PMP."
+  - icon: "fas fa-globe-asia"
+    title: "International Development"
+    text: "Technical expertise and implementation support for development agencies and their partner governments."
+
+# Technical fields, shown as tags under the services.
+expertise:
+  - "Flood risk assessment"
+  - "Hydrological &amp; hydraulic modelling"
+  - "Flood &amp; inundation mapping"
+  - "Flood control &amp; levee safety"
+  - "Coastal morphodynamics"
+  - "Shoreline evolution"
+  - "Estuary &amp; port planning"
+  - "Climate change impact assessment"
+  - "Disaster risk reduction"
+  - "Flood forecasting &amp; early warning"
+  - "Remote sensing &amp; Google Earth Engine"
+  - "Machine learning for water"
+
+# Clients and partners, shown under the projects.
+clients:
+  - "Asian Development Bank (ADB)"
+  - "Japan International Cooperation Agency (JICA)"
+  - "World Bank"
+  - "DPWH, Philippines"
+  - "National and local government agencies"
+
+experience:
+  - name: "Nippon Koei Co., Ltd., Tokyo"
+    icon: "fas fa-building"
+    url: "https://www.n-koei.co.jp/english/"
+    position: "Senior Hydrologist, Water Resources &amp; Energy Department"
+    description: "Leading consulting assignments for international clients including ADB, JICA and the World Bank: project management, technical advisory and capacity building across Asia and the Pacific."
+    date: "2026.07 - present"
+  - name: "CTI Engineering International Co., Ltd., Tokyo"
+    icon: "fas fa-building"
+    position: "Senior Consultant, Water Resources &amp; Coastal Engineering"
+    description: "Led flood control and coastal resilience projects for ADB, JICA and DPWH Philippines, from flood risk assessment to capacity development."
+    date: "2022.04 - 2026.06"
+  - name: "Tohoku University, Department of Civil Engineering"
+    icon: "fas fa-university"
+    url: "https://www.tohoku.ac.jp/en/"
+    position: "Assistant Professor"
+    description: "Applied research in coastal engineering and disaster risk reduction."
+    date: "2017.04 - 2022.03"
+  - name: "Dynamic International Solutions, Vietnam"
+    icon: "fas fa-building"
+    position: "Water Resources Engineer"
+    description: "Water resources planning and water quality management systems."
+    date: "2012.04 - 2015.02"
 
 education:
   - name: "Tohoku University, Japan"
@@ -56,26 +140,6 @@ education:
     position: "Bachelor of Science, Civil Engineering"
     date: "2003"
 
-experience:
-  - name: "Nippon Koei Co., Ltd., Tokyo"
-    icon: "fas fa-building"
-    url: "https://www.n-koei.co.jp/english/"
-    position: "Senior Hydrologist, Water Resources &amp; Coastal Engineering"
-    date: "2026.07 - present"
-  - name: "CTI Engineering International Co., Ltd., Tokyo"
-    icon: "fas fa-building"
-    position: "Senior Consultant, Water Resources &amp; Coastal Engineering"
-    date: "2022.04 - 2026.06"
-  - name: "Tohoku University, Department of Civil Engineering"
-    icon: "fas fa-university"
-    url: "https://www.tohoku.ac.jp/en/"
-    position: "Assistant Professor, coastal engineering and disaster risk reduction"
-    date: "2017.04 - 2022.03"
-  - name: "Dynamic International Solutions, Vietnam"
-    icon: "fas fa-building"
-    position: "Water Resources Engineer, water resources planning and water quality management"
-    date: "2012.04 - 2015.02"
-
 awards:
   - name: "Led US$5M+ in coastal resilience projects"
     date: "2024"
@@ -88,6 +152,12 @@ service:
   - name: "Certification: <strong>Project Management Professional (PMP)</strong>"
   - name: "Japan Society of Civil Engineers (JSCE): <strong>Member</strong>"
   - name: "International Association for Hydro-Environment Engineering and Research (IAHR): <strong>Member</strong>"
+
+# The contact card at the foot of the home page.
+contact:
+  organisation: "Nippon Koei Co., Ltd."
+  department: "Water Resources &amp; Energy Department"
+  address: "5-4 Kojimachi, Chiyoda-ku, Tokyo 102-8539, Japan"
 
 # Visitor map (ClustrMaps). Paste the "src" address from your ClustrMaps widget
 # code, e.g. "//clustrmaps.com/globe.js?d=XXXXXXXX". Leave empty to hide the card.
