@@ -1,6 +1,7 @@
 # xuantinhsea.github.io
 
-Academic homepage of **Nguyen Xuan Tinh, Ph.D.**, Senior Hydrologist at Nippon Koei Co., Ltd., Tokyo.
+Professional homepage of **Nguyen Xuan Tinh, Ph.D.**, Senior Hydrologist at Nippon Koei Co., Ltd., Tokyo:
+consulting services and projects first, then experience, tools, credentials and publications.
 
 Live at <https://xuantinhsea.github.io/>.
 
@@ -11,12 +12,20 @@ commit, and GitHub Pages rebuilds the site in about a minute.
 
 | File | What it controls |
 | --- | --- |
-| `_data/profile.yml` | Name, positions, contact links, photo, short bio, education, experience, honours, memberships, footer text |
+| `_data/profile.yml` | Name, positions, key figures (`stats`), contact links, photo, bio, availability line, consulting `services`, `expertise` tags, `clients`, experience, education, honours, memberships, contact address, footer text |
 | `_data/news.yml` | News list, newest first (more than 10 items collapse behind "Show More") |
 | `_data/publications.yml` | Papers; `selected: true` also shows a paper on the home page |
 | `_data/apps.yml` | Applications; `selected: true` also shows an app on the home page |
-| `_data/projects.yml` | Recent consulting projects |
-| `_data/navigation.yml` | Links in the top menu |
+| `_data/projects.yml` | Consulting projects, newest first: client, location, role, value, period, scope; `status: ongoing` adds an *Ongoing* tag |
+| `_data/navigation.yml` | Links in the top menu (Services, Projects and Contact jump to sections of the home page) |
+
+**Visitor map:** the "Visitors Around the World" card uses a free
+[ClustrMaps](https://clustrmaps.com) widget. Put the `src` address from your
+widget code into `clustrmaps_src` in `_data/profile.yml`; leave it empty to hide
+the card.
+
+**Adding a project:** copy an entry in `_data/projects.yml`, put it at the top,
+and remove `status: "ongoing"` from projects that have finished.
 
 **Adding a paper:** copy an entry in `_data/publications.yml` and change the
 fields. Your name is highlighted automatically in `authors` (all spellings under

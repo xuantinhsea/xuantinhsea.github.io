@@ -5,20 +5,26 @@ navbar_name: Home
 ---
 {% include widgets/profile_card.html %}
 
-{% include widgets/timeline_card.html title="Education" icon="fas fa-school" items=site.data.profile.education item_icon="fas fa-university" %}
+{% include widgets/services_card.html %}
 
-{% include widgets/timeline_card.html title="Experience" icon="fas fa-laptop-code" items=site.data.profile.experience item_icon="fas fa-building" %}
+{% include widgets/projects_card.html %}
+
+{% include widgets/timeline_card.html title="Professional Experience" icon="fas fa-briefcase" items=site.data.profile.experience item_icon="fas fa-building" %}
+
+{% assign selected_apps = site.data.apps | where: "selected", true %}
+{% include widgets/item_card.html items=selected_apps title='<i class="fas fa-laptop-code mr-2"></i>Digital Tools &amp; Applications' more_url="/applications/" more_label="All applications" %}
 
 {% include widgets/list_card.html title="News" icon="fas fa-rss" id="news" items=site.data.news %}
 
-{% assign selected_pubs = site.data.publications | where: "selected", true %}
-{% include widgets/item_card.html items=selected_pubs title='<i class="fas fa-star mr-2"></i>Selected Publications' more_url="/publications/" more_label="All publications" %}
+{% include widgets/list_card.html title="Certifications &amp; Memberships" icon="fas fa-certificate" id="service" items=site.data.profile.service %}
 
-{% assign selected_apps = site.data.apps | where: "selected", true %}
-{% include widgets/item_card.html items=selected_apps title='<i class="fas fa-laptop-code mr-2"></i>Applications' more_url="/applications/" more_label="All applications" %}
+{% include widgets/list_card.html title="Achievements &amp; Honours" icon="fas fa-trophy" id="awards" items=site.data.profile.awards %}
 
-{% include widgets/timeline_card.html title="Recent Projects" icon="fas fa-project-diagram" items=site.data.projects item_icon="fas fa-water" %}
+{% include widgets/timeline_card.html title="Education" icon="fas fa-school" items=site.data.profile.education item_icon="fas fa-university" %}
 
-{% include widgets/list_card.html title="Honors &amp; Achievements" icon="fas fa-trophy" id="awards" items=site.data.profile.awards %}
+{% assign selected_pubs = site.data.publications | where: "selected", true | slice: 0, 3 %}
+{% include widgets/item_card.html items=selected_pubs title='<i class="fas fa-book mr-2"></i>Selected Publications' more_url="/publications/" more_label="All publications" %}
 
-{% include widgets/list_card.html title="Service &amp; Memberships" icon="fas fa-handshake" id="service" items=site.data.profile.service %}
+{% include widgets/contact_card.html %}
+
+{% include widgets/visitor_map.html %}

@@ -1,6 +1,6 @@
 # Site settings. Page content lives in _data/*.yml — see README.md.
 title: "Nguyen Xuan Tinh"
-description: "Homepage of Nguyen Xuan Tinh, Ph.D. — Senior Hydrologist at Nippon Koei Co., Ltd., working on coastal engineering, flood risk and climate resilience."
+description: "Nguyen Xuan Tinh, Ph.D. — Senior Hydrologist at Nippon Koei Co., Ltd., Tokyo. Flood risk, river basin and coastal resilience consulting across Asia and the Pacific for ADB, JICA and the World Bank."
 
 # Published as the user site at https://xuantinhsea.github.io.
 url: "https://xuantinhsea.github.io"

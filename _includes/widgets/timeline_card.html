@@ -1,6 +1,6 @@
 {%- comment -%}
   A card listing organisations (education, experience, projects).
-  include.items: list with name, position, date, and optional icon / url / dept.
+  include.items: list with name, position, date, and optional icon / url / client / description.
 {%- endcomment -%}
 <div class="row mt-3">
     <div class="col">
@@ -20,6 +20,7 @@
                                         <span>{{ item.position }}</span>
                                         <em class="ml-auto pl-3 mt-auto no-break">{{ item.date }}</em>
                                     </p>
+                                    {% if item.description %}<p class="small text-muted mt-0 mb-2">{{ item.description }}</p>{% endif %}
                                 </div>
                             </li>
                             {% endfor %}

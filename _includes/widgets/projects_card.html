@@ -1,0 +1,43 @@
+{%- comment -%}
+  "Projects" — each assignment in full: role, value, client, location,
+  period and scope, then the clients and partners as tags.
+  Data: site.data.projects and site.data.profile.clients.
+{%- endcomment -%}
+<section class="row mt-3" id="projects" aria-labelledby="projects-heading">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <h6 id="projects-heading"><i class="fas fa-project-diagram"></i> &nbsp; Projects</h6>
+                <div class="mx-2">
+                    {% for project in site.data.projects %}
+                    <article class="project-entry{% if forloop.first %} pt-1{% endif %}">
+                        <div class="d-flex flex-wrap align-items-baseline">
+                            <h5 class="project-title mb-1 mr-2">{{ project.name }}</h5>
+                            {% if project.status == "ongoing" %}<span class="project-status">Ongoing</span>{% endif %}
+                        </div>
+                        <p class="small mb-2 project-meta">
+                            <span class="no-break"><i class="fas fa-landmark fa-fw" aria-hidden="true"></i> {{ project.client }}</span>
+                            {% if project.location %}<span><i class="fas fa-map-marker-alt fa-fw" aria-hidden="true"></i> {{ project.location }}</span>{% endif %}
+                            <span class="no-break"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i> {{ project.period }}</span>
+                        </p>
+                        <dl class="project-facts small mb-2">
+                            {% if project.role %}<div><dt>Role</dt><dd>{{ project.role }}</dd></div>{% endif %}
+                            {% if project.value %}<div><dt>Value</dt><dd>{{ project.value }}</dd></div>{% endif %}
+                        </dl>
+                        <p class="small mb-0">{{ project.scope }}</p>
+                    </article>
+                    {% endfor %}
+
+                    {% if site.data.profile.clients %}
+                    <h6 class="mt-4 mb-2 small font-weight-bold text-uppercase text-muted expertise-heading">Clients &amp; partners</h6>
+                    <ul class="tag-list mb-1">
+                        {% for client in site.data.profile.clients %}
+                        <li>{{ client }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

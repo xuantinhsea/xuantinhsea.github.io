@@ -1,0 +1,35 @@
+{%- comment -%}
+  "Consulting Services" — what clients engage me for, then the technical
+  fields as tags. Data: site.data.profile.services and .expertise.
+{%- endcomment -%}
+{%- assign profile = site.data.profile -%}
+<section class="row mt-3" id="services" aria-labelledby="services-heading">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <h6 id="services-heading"><i class="fas fa-handshake"></i> &nbsp; Consulting Services</h6>
+                <div class="row mx-0 mt-3">
+                    {% for service in profile.services %}
+                    <div class="col-12 col-md-6 col-lg-4 px-2 mb-3">
+                        <div class="service-item h-100">
+                            <span class="service-icon" aria-hidden="true"><i class="{{ service.icon }}"></i></span>
+                            <div>
+                                <p class="service-title mb-1">{{ service.title }}</p>
+                                <p class="small text-muted mb-0">{{ service.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% if profile.expertise %}
+                <h6 class="mt-2 mb-2 mx-2 small font-weight-bold text-uppercase text-muted expertise-heading">Technical expertise</h6>
+                <ul class="tag-list mx-2 mb-1">
+                    {% for field in profile.expertise %}
+                    <li>{{ field }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

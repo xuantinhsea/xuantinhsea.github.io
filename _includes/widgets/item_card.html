@@ -1,8 +1,9 @@
 {%- comment -%}
   The "Selected Publications" / "Applications" card on the home page.
-  include.items, include.title (HTML), include.more_url, include.more_label.
+  include.items, include.title (HTML), include.more_url, include.more_label,
+  include.id (optional anchor).
 {%- endcomment -%}
-<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm"{% if include.id %} id="{{ include.id }}"{% endif %}>
     <h6 class="border-bottom border-gray p-3 mb-0">
         {{ include.title }}
         <a href="{{ include.more_url | relative_url }}">(view more <i class="fas fa-angle-double-right"></i>)</a>
