@@ -1,0 +1,93 @@
+# Everything in the profile, bio, education, experience, awards and
+# membership cards. Text fields accept HTML (<strong>, <a href="...">, ...).
+
+primary_name: "Nguyen Xuan Tinh"
+navbar_name: "Nguyen Xuan Tinh"
+
+# Other spellings of your name in author lists; these are highlighted.
+name_variants:
+  - "Nguyen Xuan Tinh"
+  - "Xuan Tinh Nguyen"
+  - "Tinh Xuan Nguyen"
+
+positions:
+  - icon: "fas fa-briefcase"
+    text: 'Senior Hydrologist, <a href="https://www.n-koei.co.jp/english/" target="_blank" rel="noopener">Nippon Koei Co., Ltd.</a> (2026)'
+  - icon: "fas fa-user-graduate"
+    text: "Ph.D. in Civil &amp; Environmental Engineering, Tohoku University"
+  - icon: "fas fa-map-marker-alt"
+    text: "5-4 Kojimachi, Chiyoda-ku, Tokyo 102-8539, Japan"
+
+email: "xuantinhsea@gmail.com"
+gscholar: "HjEHy2EAAAAJ"
+researchgate: "Nguyen-Tinh-10"
+github: "xuantinhsea"
+orcid: "0000-0001-9712-0583"
+linkedin: "nguyen-xuan-tinh-7658b6a"
+
+portrait_url: "assets/images/portrait.jpg"
+portrait_caption: "Nguyen Xuan Tinh, Tokyo"
+
+short_bio: >-
+  Hi, I am <strong>Nguyen Xuan Tinh</strong>, a Senior Hydrologist in the Water Resources &amp; Energy Department
+  of <strong>Nippon Koei Co., Ltd.</strong> in Tokyo. I received my Ph.D. in Civil and Environmental Engineering
+  from <a href="https://www.tohoku.ac.jp/en/" target="_blank" rel="noopener">Tohoku University</a>, after an
+  M.Eng. in Water Resources Engineering at Lund University. Previously, I was a Senior Consultant at CTI Engineering
+  International (2022–2026) and an Assistant Professor at Tohoku University (2017–2022).
+  <br> With more than 18 years of experience, I lead flood-risk, coastal and climate-resilience projects across Asia
+  and the Pacific for clients including <strong>ADB</strong>, <strong>JICA</strong> and the <strong>World Bank</strong>.
+  <br> My research interests focus on <strong>coastal morphodynamics and shoreline evolution</strong>,
+  <strong>flood and inundation modelling</strong>, and <strong>remote sensing and machine learning for water</strong>.
+  <br> <span style="color: red; font-style: italic;">Feel free to contact me about consulting, technical advisory or research collaboration.</span>
+
+education:
+  - name: "Tohoku University, Japan"
+    icon: "fas fa-university"
+    url: "https://www.tohoku.ac.jp/en/"
+    position: "Doctor of Engineering, Civil &amp; Environmental Engineering"
+    date: "2009"
+  - name: "Lund University, Sweden"
+    icon: "fas fa-university"
+    url: "https://www.lunduniversity.lu.se/"
+    position: "Master of Engineering, Water Resources Engineering"
+    date: "2006"
+  - name: "Hanoi University of Science, Vietnam"
+    icon: "fas fa-university"
+    url: "https://hus.vnu.edu.vn/"
+    position: "Bachelor of Science, Civil Engineering"
+    date: "2003"
+
+experience:
+  - name: "Nippon Koei Co., Ltd., Tokyo"
+    icon: "fas fa-building"
+    url: "https://www.n-koei.co.jp/english/"
+    position: "Senior Hydrologist, Water Resources &amp; Coastal Engineering"
+    date: "2026.07 - present"
+  - name: "CTI Engineering International Co., Ltd., Tokyo"
+    icon: "fas fa-building"
+    position: "Senior Consultant, Water Resources &amp; Coastal Engineering"
+    date: "2022.04 - 2026.06"
+  - name: "Tohoku University, Department of Civil Engineering"
+    icon: "fas fa-university"
+    url: "https://www.tohoku.ac.jp/en/"
+    position: "Assistant Professor, coastal engineering and disaster risk reduction"
+    date: "2017.04 - 2022.03"
+  - name: "Dynamic International Solutions, Vietnam"
+    icon: "fas fa-building"
+    position: "Water Resources Engineer, water resources planning and water quality management"
+    date: "2012.04 - 2015.02"
+
+awards:
+  - name: "Led US$5M+ in coastal resilience projects"
+    date: "2024"
+  - name: "Delivered 15+ international consulting projects"
+    date: "2023"
+  - name: "Best Research Paper Award, Japan Society of Civil Engineers (JSCE)"
+    date: "2021"
+
+service:
+  - name: "Certification: <strong>Project Management Professional (PMP)</strong>"
+  - name: "Japan Society of Civil Engineers (JSCE): <strong>Member</strong>"
+  - name: "International Association for Hydro-Environment Engineering and Research (IAHR): <strong>Member</strong>"
+
+footer_text: "Floods, rivers and coasts across Asia and the Pacific."

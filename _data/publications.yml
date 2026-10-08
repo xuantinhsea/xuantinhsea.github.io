@@ -1,0 +1,68 @@
+# Newest first. "selected: true" also shows the paper on the home page.
+# cover: image in assets/images/covers/; bibtex: file in assets/bibtex/ (for the Cite button).
+
+- title: "Spatio-temporal dynamics monitoring of surface water bodies in Nhat Le River Basin, Vietnam, by Google Earth Engine"
+  authors: ["Vu Anh Minh", "Dinh Nhat Quang", "Nguyen Xuan Tinh", "Lars Ribbe"]
+  venue: "Journal of Water and Climate Change"
+  details: "15(3)"
+  year: 2024
+  tags: ["IF 2.8", "Remote sensing"]
+  doi: "10.2166/wcc.2024.574"
+  cover: "assets/images/covers/pub-jwcc-2024.jpg"
+  bibtex: "assets/bibtex/minh2024spatio.bib"
+  selected: true
+
+- title: "Hydrologic-geotechnical modelling of shallow landslide and flood hazards caused by heavy rainfall"
+  authors: ["Nilo Lemuel J. Dolojan", "Shuji Moriguchi", "Masakazu Hashimoto", "Nguyen Xuan Tinh", "Hitoshi Tanaka", "Kenjiro Terada"]
+  venue: "Engineering Geology"
+  details: "323, 107184"
+  year: 2023
+  tags: ["IF 6.9", "Multi-hazard"]
+  doi: "10.1016/j.enggeo.2023.107184"
+  cover: "assets/images/covers/pub-enggeo-2023.jpg"
+  bibtex: "assets/bibtex/dolojan2023hydrologic.bib"
+  selected: true
+
+- title: "Evaluation of Cua Lo Estuary’s morpho-dynamic evolution and its impact on port planning"
+  authors: ["Dinh Nhat Quang", "Nguyen Quang Duc Anh", "Ho Sy Tam", "Nguyen Xuan Tinh", "Hitoshi Tanaka", "Nguyen Trung Viet"]
+  venue: "Journal of Marine Science and Engineering"
+  details: "11(3), 611"
+  year: 2023
+  tags: ["IF 2.7", "Estuary morphodynamics"]
+  doi: "10.3390/jmse11030611"
+  cover: "assets/images/covers/pub-jmse-2023.jpg"
+  bibtex: "assets/bibtex/quang2023evaluation.bib"
+  selected: true
+
+- title: "Advanced machine learning techniques for predicting Nha Trang shorelines"
+  authors: ["Cheng Yin", "Le Thanh Binh", "Duong Tran Anh", "Son T. Mai", "Anh Le", "Van-Hau Nguyen", "Van-Chien Nguyen", "Nguyen Xuan Tinh", "Hitoshi Tanaka", "Nguyen Trung Viet", "Long D. Nguyen", "Trung Q. Duong"]
+  venue: "IEEE Access"
+  details: "9, 98132–98149"
+  year: 2021
+  tags: ["IF 3.4", "Machine learning"]
+  doi: "10.1109/ACCESS.2021.3095339"
+  cover: "assets/images/covers/pub-ieee-2021.jpg"
+  bibtex: "assets/bibtex/yin2021advanced.bib"
+  selected: false
+
+- title: "Numerical investigation of the effect of seasonal variations of depth-of-closure on shoreline evolution"
+  authors: ["Xuan Tinh Nguyen", "Minh Thanh Tran", "Hitoshi Tanaka", "Trung Viet Nguyen", "Yuta Mitobe", "Cong Dien Duong"]
+  venue: "International Journal of Sediment Research"
+  details: "36(1), 1–16"
+  year: 2021
+  tags: ["IF 3.7", "Shoreline modelling"]
+  doi: "10.1016/j.ijsrc.2020.03.016"
+  cover: "assets/images/covers/pub-ijsr-2021.jpg"
+  bibtex: "assets/bibtex/nguyen2021numerical.bib"
+  selected: true
+
+- title: "Mechanisms of flood-induced levee breaching in Marumori Town during the 2019 Hagibis Typhoon"
+  authors: ["Nguyen Xuan Tinh", "Hitoshi Tanaka", "Gen Abe", "Yuka Okamoto", "Kwanchai Pakoksung"]
+  venue: "Water"
+  details: "13(2), 244"
+  year: 2021
+  tags: ["IF 3.1", "Flood hazard"]
+  doi: "10.3390/w13020244"
+  cover: "assets/images/covers/pub-water-2021.jpg"
+  bibtex: "assets/bibtex/tinh2021mechanisms.bib"
+  selected: true

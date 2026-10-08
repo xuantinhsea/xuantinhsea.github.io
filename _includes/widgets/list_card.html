@@ -1,0 +1,35 @@
+{%- comment -%}
+  A card with a small bulleted list (news, honours, service).
+  include.items: list with text (or name) and optional date.
+  Lists longer than 10 collapse behind a "Show More" button.
+{%- endcomment -%}
+{%- assign count = include.items | size -%}
+<div class="row mt-3">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <div class="my-1">
+                    <h6><i class="{{ include.icon }}"></i> &nbsp; {{ include.title }}</h6>
+                    <div class="mx-2">
+                        <ul class="list small pl-3 mb-1{% if count > 10 %} collapsible-fade{% endif %}" data-collapsible-list="{{ include.id }}">
+                            {% for item in include.items %}
+                            <li{% if forloop.index > 10 %} class="d-none" data-collapsible-extra{% endif %}>
+                                {% if item.date and item.date != "" %}<strong class="mr-1">{{ item.date }}.</strong>{% endif %}
+                                <em>{{ item.text | default: item.name }}</em>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% if count > 10 %}
+                        <div class="collapsible-toggle-container">
+                            <button type="button" class="collapsible-toggle-btn" data-collapsible-toggle="{{ include.id }}" aria-expanded="false">
+                                <span data-collapsible-more>Show More <i class="fas fa-chevron-down" aria-hidden="true"></i></span>
+                                <span class="d-none" data-collapsible-less>Show Less <i class="fas fa-chevron-up" aria-hidden="true"></i></span>
+                            </button>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

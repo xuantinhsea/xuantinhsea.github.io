@@ -1,0 +1,58 @@
+{%- comment -%}
+  One row in a publication or application list: cover image on the left,
+  details and resource buttons on the right (stacked on phones).
+  include.item: a publication (title, authors, venue, ...) or an app (name, description, ...).
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign title = item.title | default: item.name -%}
+<div class="row no-gutters border-bottom border-gray pub-row">
+    <div class="col-12 col-md-3 col-xl-2 p-3 pb-0 pb-md-3">
+        {% if item.cover %}
+        <img src="{{ item.cover | relative_url }}" alt="" loading="lazy" class="w-100 rounded-sm pub-cover">
+        {% endif %}
+    </div>
+    <div class="col-12 col-md-9 col-xl-10 p-3 pl-md-0">
+        <h5 class="mt-0 mb-1 font-weight-normal">{{ title }}</h5>
+
+        {% if item.authors %}
+        <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
+        {% endif %}
+
+        {% if item.venue or item.tags %}
+        <p class="mt-0 mb-0 small publication-venue-line">
+            {% if item.venue %}<span class="publication-venue"><i>{{ item.venue }}</i>{% if item.details %}, {{ item.details }}{% endif %}{% if item.year %}, {{ item.year }}{% endif %}</span>{% endif %}
+            {% if item.tags %}<span class="publication-meta-box">{{ item.tags | join: " · " | escape }}</span>{% endif %}
+        </p>
+        {% endif %}
+
+        {% if item.description %}
+        <p class="mt-1 mb-0 small text-muted">{{ item.description }}</p>
+        {% endif %}
+
+        <div class="publication-actions">
+            {% if item.doi %}
+            <a class="publication-action publication-action-paper" target="_blank" rel="noopener" href="https://doi.org/{{ item.doi }}">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i><span>Paper</span>
+            </a>
+            {% endif %}
+            {% if item.live %}
+            <a class="publication-action publication-action-project" target="_blank" rel="noopener" href="{{ item.live }}">
+                <i class="fas fa-globe" aria-hidden="true"></i><span>Live App</span>
+            </a>
+            {% endif %}
+            {% if item.code %}
+            <a class="publication-action publication-action-code" target="_blank" rel="noopener" href="{{ item.code }}">
+                <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+            {% endif %}
+            {% if item.bibtex %}
+            <a class="publication-action publication-action-cite" target="_blank" href="{{ item.bibtex | relative_url }}">
+                <i class="fas fa-quote-right" aria-hidden="true"></i><span>Cite</span>
+            </a>
+            {% endif %}
+            {% if item.doi %}
+            <span class="small text-muted align-self-center ml-1">DOI: {{ item.doi }}</span>
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+# Software and applications, grouped by "category" (in this order).
+# "selected: true" also shows the app on the home page.
+# Links: "live" for a running app, "code" for its repository.
+
+- name: "Global Water Atlas"
+  category: "Floods & Water Data"
+  description: "One map of observed water data worldwide — river discharge and level, rainfall, reservoirs and tide gauges from 29 providers and about 98,000 stations — with selection tools, previews and batch CSV download. Built on the open-source RivRetrieve-Python library."
+  tags: ["Python", "FastAPI", "React"]
+  live: "https://global-water-atlas.vercel.app"
+  code: "https://github.com/xuantinhsea/Global_Water_Atlas"
+  cover: "assets/images/covers/app-global-water-atlas.jpg"
+  selected: true
+
+- name: "Magat Dam FloodCast"
+  category: "Floods & Water Data"
+  description: "Operator dashboard of an automated flood-forecasting system for the Magat River basin, Philippines: forecast rainfall drives the ICHARM RRI model to give discharge, water level, inundation depth and warning levels. Published as an archived snapshot."
+  tags: ["RRI model", "Leaflet", "Chart.js"]
+  live: "https://magat-dam-floodcast.vercel.app"
+  code: "https://github.com/xuantinhsea/magat-dam-floodcast"
+  cover: "assets/images/covers/app-magat-floodcast.jpg"
+  selected: true
+
+- name: "Thai Hydro Watch"
+  category: "Floods & Water Data"
+  description: "Water level, discharge and rainfall from Thailand’s ThaiWater network — 359 water-level stations and 2,003 rain gauges — with automatic data-quality checks, hydrographs and CSV export."
+  tags: ["Python", "JavaScript"]
+  live: "https://xuantinhsea.github.io/thai-hydro-watch/"
+  code: "https://github.com/xuantinhsea/thai-hydro-watch"
+  cover: "assets/images/covers/app-thai-hydro-watch.jpg"
+  selected: true
+
+- name: "StormFlood Mapping Pro"
+  category: "Floods & Water Data"
+  description: "Google Earth Engine dashboard for rapid storm-flood mapping from Sentinel-1 SAR, following the UN-SPIDER method, with optical cross-checks and estimates of exposed population, cropland and built-up area."
+  tags: ["Google Earth Engine"]
+  code: "https://github.com/xuantinhsea/StormFlood_Mapping_Pro"
+  cover: "assets/images/covers/app-stormflood.jpg"
+  selected: false
+
+- name: "Open-Meteo Explorer"
+  category: "Weather & Climate"
+  description: "Explore, chart and download global weather, marine, flood and climate-projection data: 7 data modes, 57 models and datasets and 128 variables, with export to CSV, Excel and PNG."
+  tags: ["React", "Leaflet", "Chart.js"]
+  code: "https://github.com/xuantinhsea/open-meteo-explorer"
+  cover: "assets/images/covers/app-open-meteo-explorer.jpg"
+  selected: false
+
+- name: "Model Spread"
+  category: "Weather & Climate"
+  description: "Sixteen weather models side by side on a phone, two weeks back and sixteen days ahead — showing how far forecasts disagree, which matters most before a flood."
+  tags: ["React", "PWA"]
+  code: "https://github.com/xuantinhsea/Weather-forecast"
+  cover: "assets/images/covers/app-model-spread.jpg"
+  selected: false
+
+- name: "BestCast"
+  category: "Weather & Climate"
+  description: "A local forecast that reconciles sixteen forecast services into one most-likely figure for each day and hour, in Vietnamese, English and Japanese."
+  tags: ["React", "PWA"]
+  live: "https://xuantinhsea.github.io/BestCast/"
+  code: "https://github.com/xuantinhsea/BestCast"
+  cover: "assets/images/covers/app-bestcast.jpg"
+  selected: false
+
+- name: "Hydro-MetCO"
+  category: "Weather & Climate"
+  description: "Desktop application for downloading and processing hydrological, meteorological, climate and ocean datasets from Copernicus, CHIRPS and GSMaP."
+  tags: ["Desktop"]
+  code: "https://github.com/xuantinhsea/Hydro-MetCO"
+  cover: "assets/images/covers/app-hydro-metco.jpg"
+  selected: false
+
+- name: "CoastalEng Pro"
+  category: "Coastal Engineering"
+  description: "Eighteen coastal engineering calculators — wave dispersion, run-up, EurOtop overtopping, breakwater armour, tides, sediment transport, shoreline evolution and extreme-value analysis — modernised from the classic Dalrymple and Lynett coastal applets."
+  tags: ["Next.js", "TypeScript"]
+  code: "https://github.com/xuantinhsea/CoastalEngPro"
+  cover: "assets/images/covers/app-coastaleng-pro.jpg"
+  selected: true
+
+- name: "ASTRO-TIDE"
+  category: "Coastal Engineering"
+  description: "Global tidal analysis: pick any ocean point to extract predictions from FES2022, TPXO10, EOT20 and other tide models, with harmonic constituents, tidal datums and data export."
+  tags: ["React", "FastAPI", "pyTMD"]
+  code: "https://github.com/xuantinhsea/ASTRO-TIDE"
+  cover: "assets/images/covers/app-astro-tide.jpg"
+  selected: false

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Layout adapted from https://github.com/luost26/academic-homepage (MIT License) -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% if page.title and page.title != "Homepage" %}{{ page.title }} - {% endif %}{{ site.data.profile.primary_name }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ site.data.profile.primary_name }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="{{ site.data.profile.primary_name }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script>
+        // Apply the saved colour theme before first paint to avoid a light-mode flash.
+        (function () {
+            try {
+                if (localStorage.getItem('site-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": {{ site.data.profile.primary_name | jsonify }},
+        "jobTitle": "Senior Hydrologist",
+        "worksFor": { "@type": "Organization", "name": "Nippon Koei Co., Ltd." },
+        "url": {{ '/' | absolute_url | jsonify }},
+        "sameAs": [
+            "https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}",
+            "https://www.researchgate.net/profile/{{ site.data.profile.researchgate }}",
+            "https://orcid.org/{{ site.data.profile.orcid }}",
+            "https://www.linkedin.com/in/{{ site.data.profile.linkedin }}/",
+            "https://github.com/{{ site.data.profile.github }}"
+        ]
+    }
+    </script>
+</head>
+
+<body class="bg-light" {{ page.body_attr }}>
+    {% include navbar.html %}
+    <div class="container">
+        {{ content }}
+    </div>
+    {% include footer.html %}
+
+    <canvas id="bg-network" aria-hidden="true"></canvas>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js" integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg==" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
+</body>
+</html>
