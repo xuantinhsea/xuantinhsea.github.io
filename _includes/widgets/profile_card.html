@@ -1,0 +1,76 @@
+{%- assign profile = site.data.profile -%}
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <div class="row">
+                    <div class="col">
+                        <p class="h1 font-weight-normal">{{ profile.primary_name }}</p>
+                        <p class="text-profile-position">
+                            {% for position in profile.positions %}
+                            <i class="{{ position.icon }} fa-fw"></i>&nbsp;{{ position.text }}<br>
+                            {% endfor %}
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <a class="pr-3 no-break" href="mailto:{{ profile.email }}">
+                                    <i class="fas fa-at"></i> <span class="email-text">{{ profile.email | replace: "@", "(at)" }}</span>
+                                </a>
+                                {% if profile.gscholar %}
+                                <a class="pr-3 no-break" target="_blank" rel="noopener" href="https://scholar.google.com/citations?user={{ profile.gscholar }}&amp;hl=en">
+                                    <i class="fab fa-google"></i> Google Scholar
+                                </a>
+                                {% endif %}
+                                {% if profile.researchgate %}
+                                <a class="pr-3 no-break" target="_blank" rel="noopener" href="https://www.researchgate.net/profile/{{ profile.researchgate }}">
+                                    <i class="fab fa-researchgate"></i> ResearchGate
+                                </a>
+                                {% endif %}
+                                {% if profile.github %}
+                                <a class="pr-3 no-break" target="_blank" rel="noopener" href="https://github.com/{{ profile.github }}">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                {% endif %}
+                                {% if profile.orcid %}
+                                <a class="pr-3 no-break" target="_blank" rel="noopener" href="https://orcid.org/{{ profile.orcid }}">
+                                    <i class="fab fa-orcid"></i> ORCID
+                                </a>
+                                {% endif %}
+                                {% if profile.linkedin %}
+                                <a class="pr-3 no-break" target="_blank" rel="noopener" href="https://www.linkedin.com/in/{{ profile.linkedin }}/">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if profile.portrait_url %}
+                    <div class="col-md-auto d-none d-md-block">
+                        <figure class="figure mb-0">
+                            <img src="{{ profile.portrait_url | relative_url }}" alt="{{ profile.primary_name }}"
+                                 class="figure-img img-fluid img-thumbnail mb-0" style="height: 200px;"
+                                 data-toggle="tooltip" data-placement="top" title="{{ profile.portrait_caption }}">
+                        </figure>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <div class="my-1">
+                    <h6><i class="fas fa-id-card"></i> &nbsp; Short-bio</h6>
+                    <div class="mx-2 text-profile-bio">
+                        {{ profile.short_bio }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,47 +1,55 @@
 # xuantinhsea.github.io
 
-Personal website of **Nguyen Xuan Tinh, Ph.D.**, Senior Coastal & Hydrological
-Specialist at Nippon Koei Co., Ltd., Tokyo.
+Academic homepage of **Nguyen Xuan Tinh, Ph.D.**, Senior Hydrologist at Nippon Koei Co., Ltd., Tokyo.
 
-Live at <https://xuantinhsea.github.io>.
-
-## How it is built
-
-One static page: plain HTML and CSS, no framework and no build step. GitHub Pages
-publishes the `main` branch as it is.
-
-```
-index.html               the whole site: all content lives here
-404.html                 page shown for unknown addresses
-assets/css/style.css     all styling; colours and fonts are tokens at the top
-assets/images/
-  portrait.webp/.png     photo used on the page (cropped from photo.png)
-  og-image.jpg           preview image shown when the link is shared
-  apple-touch-icon.png   home-screen icon
-favicon.svg              browser tab icon
-sitemap.xml, robots.txt  for search engines
-```
+Live at <https://xuantinhsea.github.io/>.
 
 ## Editing content
 
-Everything you see is in `index.html`, one `<section>` per part of the page
-(About, Services, Projects, Applications, Experience, Education, Publications,
-Contact). To add an entry, copy a neighbouring `<li>` and change its text:
+Everyday updates only touch the YAML files in `_data/`. Edit one on GitHub,
+commit, and GitHub Pages rebuilds the site in about a minute.
 
-- **Projects, experience, education, publications** use the same row:
-  a date in `<span class="when mono">` and the details beside it.
-- **Applications** are `<li class="app">` cards, grouped under a small heading.
-  Each has a name, a one-sentence description, the tech stack and its links
-  (`Live` for a running app, `Code` for the GitHub repository).
+| File | What it controls |
+| --- | --- |
+| `_data/profile.yml` | Name, positions, contact links, photo, short bio, education, experience, honours, memberships, footer text |
+| `_data/news.yml` | News list, newest first (more than 10 items collapse behind "Show More") |
+| `_data/publications.yml` | Papers; `selected: true` also shows a paper on the home page |
+| `_data/apps.yml` | Applications; `selected: true` also shows an app on the home page |
+| `_data/projects.yml` | Recent consulting projects |
+| `_data/navigation.yml` | Links in the top menu |
 
-Colours are set once at the top of `assets/css/style.css` (`--paper`, `--ink`,
-`--accent`, …), with a matching dark-mode set below them.
+**Adding a paper:** copy an entry in `_data/publications.yml` and change the
+fields. Your name is highlighted automatically in `authors` (all spellings under
+`name_variants` in `profile.yml`). Optional extras:
+
+- `cover:` an image in `assets/images/covers/` (600 × 400 works well)
+- `bibtex:` a `.bib` file in `assets/bibtex/` — this adds the **Cite** button
+
+## Files
+
+```
+_config.yml              site title, description and address
+_layouts/default.html    page shell: <head>, navbar, footer, scripts
+_includes/               navbar, footer and the card widgets
+index.html               home page (the order of cards is set here)
+publications.html        all publications, by year
+applications.html        all applications, by category
+assets/css/global.css    styles, including dark mode
+assets/js/common.js      theme toggle, "Show More" lists, background animation
+assets/images/           photo, cover images, icons
+assets/bibtex/           citation files
+```
 
 ## Preview locally
 
 ```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
+bundle install
+bundle exec jekyll serve
+# open http://localhost:4000/
 ```
 
-Or with the same Jekyll setup as GitHub Pages: `bundle install && bundle exec jekyll serve`.
+## Credits
+
+The layout follows the card design of
+[academic-homepage](https://github.com/luost26/academic-homepage) by Shitong Luo
+(MIT License), as used on [shengxiang-lin.github.io](https://shengxiang-lin.github.io/).

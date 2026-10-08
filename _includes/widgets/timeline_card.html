@@ -1,0 +1,32 @@
+{%- comment -%}
+  A card listing organisations (education, experience, projects).
+  include.items: list with name, position, date, and optional icon / url / dept.
+{%- endcomment -%}
+<div class="row mt-3">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4">
+                <div class="my-1">
+                    <h6><i class="{{ include.icon }}"></i> &nbsp; {{ include.title }}</h6>
+                    <div class="mx-2">
+                        <ul class="list-unstyled mb-1">
+                            {% for item in include.items %}
+                            <li class="media mb-1">
+                                <span class="org-badge mr-1 mt-1" aria-hidden="true"><i class="{{ item.icon | default: include.item_icon }}"></i></span>
+                                <div class="media-body">
+                                    <p class="my-0">{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener" class="text-black text-decoration-none">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</p>
+                                    {% if item.client %}<p class="small my-0">{{ item.client }}</p>{% endif %}
+                                    <p class="small my-0 d-flex">
+                                        <span>{{ item.position }}</span>
+                                        <em class="ml-auto pl-3 mt-auto no-break">{{ item.date }}</em>
+                                    </p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

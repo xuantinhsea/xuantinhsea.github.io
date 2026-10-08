@@ -1,0 +1,37 @@
+---
+layout: default
+title: Applications
+navbar_name: Applications
+permalink: /applications/
+description: Software and web applications by Nguyen Xuan Tinh for flood forecasting, water data and coastal engineering.
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-category" data-offset="100"
+---
+
+<blockquote>
+    Tools I have built for flood forecasting, water data and coastal engineering. Source code is on
+    <a href="https://github.com/{{ site.data.profile.github }}" target="_blank" rel="noopener">🔗GitHub</a>.
+</blockquote>
+
+{% assign apps_by_category = site.data.apps | group_by: "category" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        {% for group in apps_by_category %}
+        <h2 class="pt-4" id="cat-{{ forloop.index }}">{{ group.name | escape }}</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            {% for item in group.items %}
+                {% include widgets/publication_item.html item=item %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-category" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for group in apps_by_category %}
+            <a class="nav-link d-block" href="#cat-{{ forloop.index }}">{{ group.name | escape }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

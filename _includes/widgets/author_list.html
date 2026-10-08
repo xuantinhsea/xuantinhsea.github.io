@@ -1,0 +1,5 @@
+{%- assign me = site.data.profile.name_variants -%}
+{%- for author in include.authors -%}
+    {%- if me contains author -%}<strong class="author-self">{{ author }}</strong>{%- else -%}{{ author }}{%- endif -%}
+    {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}

@@ -1,11 +1,12 @@
-# GitHub Pages builds this site with Jekyll. The pages are plain HTML with no
-# front matter, so Jekyll copies them as they are; this file only sets site
-# metadata and keeps repository files out of the published site.
+# Site settings. Page content lives in _data/*.yml — see README.md.
 title: "Nguyen Xuan Tinh"
-description: "Hydrologist and coastal engineer: water resources, flood risk, coastal engineering and climate resilience."
-author: "Nguyen Xuan Tinh"
+description: "Homepage of Nguyen Xuan Tinh, Ph.D. — Senior Hydrologist at Nippon Koei Co., Ltd., working on coastal engineering, flood risk and climate resilience."
+
+# Published as the user site at https://xuantinhsea.github.io.
 url: "https://xuantinhsea.github.io"
 baseurl: ""
+
+markdown: kramdown
 
 exclude:
   - README.md
